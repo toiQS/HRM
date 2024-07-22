@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HRM.Models
 {
-    public class Traning
+    public class Training
     {
         [Key]
         public int Id { get; set; }
