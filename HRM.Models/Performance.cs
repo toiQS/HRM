@@ -21,9 +21,9 @@ namespace HRM.Models
         public virtual Employee Employee { get; set; }
 
         
-        [ForeignKey(nameof(Traning))]
-        public int TraningId { get; set; }
-        public virtual Traning Traning { get; set; }
+        [ForeignKey(nameof(Training))]
+        public int TrainingId { get; set; }
+        public virtual Training Training { get; set; }
 
         [ForeignKey(nameof(Salary))]    
         public int SalaryId { get; set; }
