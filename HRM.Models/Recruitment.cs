@@ -12,7 +12,7 @@ namespace HRM.Models
     {
         [Key]
         public int Id { get; set; }
-        public string Position { get; set; } = string.Empty;
+        public string RecruitmentPosition { get; set; } = string.Empty;
         public DateTime PostingDate { get; set; }
         public DateTime Deadline { get; set; }
         public string Status { get; set; } = string.Empty;
