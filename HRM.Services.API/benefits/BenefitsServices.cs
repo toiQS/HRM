@@ -149,6 +149,7 @@ namespace HRM.Services.API.benefits
                 data.StartAt = benefits.StartAt;
                 data.EndAt = benefits.EndAt;
                 data.TypeBenefits = benefits.TypeBenefits;
+                data.PositionId = benefits.PositionId;
 
                 _context.Benefits.Update(data);
                 await _context.SaveChangesAsync();
