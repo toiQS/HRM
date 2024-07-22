@@ -41,6 +41,9 @@ namespace HRM.Data.Migrations
                     b.Property<DateTime>("EndAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("PositionId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("StartAt")
                         .HasColumnType("datetime2");
 
@@ -50,35 +53,110 @@ namespace HRM.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("PositionId");
+
                     b.ToTable("Benefits");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            BenefitsDescription = "Covers medical expenses",
+                            BenefitsDescription = "Comprehensive health insurance",
                             BenefitsName = "Health Insurance",
-                            EndAt = new DateTime(2025, 7, 21, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(4987),
-                            StartAt = new DateTime(2024, 7, 21, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(4976),
-                            TypeBenefits = "Medical"
+                            EndAt = new DateTime(2025, 7, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(3941),
+                            PositionId = 1,
+                            StartAt = new DateTime(2023, 7, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(3922),
+                            TypeBenefits = "Health"
                         },
                         new
                         {
                             Id = 2,
-                            BenefitsDescription = "Access to gym facilities",
-                            BenefitsName = "Gym Membership",
-                            EndAt = new DateTime(2025, 7, 21, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(4995),
-                            StartAt = new DateTime(2024, 7, 21, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(4995),
-                            TypeBenefits = "Wellness"
+                            BenefitsDescription = "Comprehensive dental insurance",
+                            BenefitsName = "Dental Insurance",
+                            EndAt = new DateTime(2025, 8, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(3946),
+                            PositionId = 2,
+                            StartAt = new DateTime(2023, 8, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(3944),
+                            TypeBenefits = "Health"
                         },
                         new
                         {
                             Id = 3,
-                            BenefitsDescription = "Vacation and sick leave",
+                            BenefitsDescription = "Comprehensive vision insurance",
+                            BenefitsName = "Vision Insurance",
+                            EndAt = new DateTime(2025, 9, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(3948),
+                            PositionId = 3,
+                            StartAt = new DateTime(2023, 9, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(3947),
+                            TypeBenefits = "Health"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            BenefitsDescription = "Company matched retirement plan",
+                            BenefitsName = "Retirement Plan",
+                            EndAt = new DateTime(2025, 10, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(3950),
+                            PositionId = 4,
+                            StartAt = new DateTime(2023, 10, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(3949),
+                            TypeBenefits = "Retirement"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            BenefitsDescription = "20 days paid time off per year",
                             BenefitsName = "Paid Time Off",
-                            EndAt = new DateTime(2025, 7, 21, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(4997),
-                            StartAt = new DateTime(2024, 7, 21, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(4997),
+                            EndAt = new DateTime(2025, 11, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(3952),
+                            PositionId = 5,
+                            StartAt = new DateTime(2023, 11, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(3951),
                             TypeBenefits = "Leave"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            BenefitsDescription = "Life insurance coverage",
+                            BenefitsName = "Life Insurance",
+                            EndAt = new DateTime(2025, 12, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(3954),
+                            PositionId = 6,
+                            StartAt = new DateTime(2023, 12, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(3953),
+                            TypeBenefits = "Life"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            BenefitsDescription = "Short and long-term disability insurance",
+                            BenefitsName = "Disability Insurance",
+                            EndAt = new DateTime(2026, 1, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(3956),
+                            PositionId = 7,
+                            StartAt = new DateTime(2024, 1, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(3955),
+                            TypeBenefits = "Disability"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            BenefitsDescription = "Free gym membership",
+                            BenefitsName = "Gym Membership",
+                            EndAt = new DateTime(2026, 2, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(3958),
+                            PositionId = 8,
+                            StartAt = new DateTime(2024, 2, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(3957),
+                            TypeBenefits = "Wellness"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            BenefitsDescription = "Reimbursement for continuing education",
+                            BenefitsName = "Tuition Reimbursement",
+                            EndAt = new DateTime(2026, 3, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(3960),
+                            PositionId = 9,
+                            StartAt = new DateTime(2024, 3, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(3959),
+                            TypeBenefits = "Education"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            BenefitsDescription = "Subsidized commuting costs",
+                            BenefitsName = "Commuter Benefits",
+                            EndAt = new DateTime(2026, 4, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(3962),
+                            PositionId = 10,
+                            StartAt = new DateTime(2024, 4, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(3961),
+                            TypeBenefits = "Commuting"
                         });
                 });
 
@@ -100,26 +178,68 @@ namespace HRM.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Department");
+                    b.ToTable("Departments");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            DepartmentName = "Human Resources",
-                            Description = "Handles HR tasks"
+                            DepartmentName = "Engineering",
+                            Description = "Handles product development"
                         },
                         new
                         {
                             Id = 2,
-                            DepartmentName = "Development",
-                            Description = "Handles software development tasks"
+                            DepartmentName = "Human Resources",
+                            Description = "Handles employee relations"
                         },
                         new
                         {
                             Id = 3,
+                            DepartmentName = "Marketing",
+                            Description = "Handles marketing and advertising"
+                        },
+                        new
+                        {
+                            Id = 4,
                             DepartmentName = "Sales",
                             Description = "Handles sales and customer relations"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            DepartmentName = "Finance",
+                            Description = "Handles financial operations"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            DepartmentName = "Customer Support",
+                            Description = "Handles customer support"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            DepartmentName = "Legal",
+                            Description = "Handles legal matters"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            DepartmentName = "IT",
+                            Description = "Handles IT infrastructure"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            DepartmentName = "Operations",
+                            Description = "Handles day-to-day operations"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            DepartmentName = "R&D",
+                            Description = "Handles research and development"
                         });
                 });
 
@@ -175,7 +295,7 @@ namespace HRM.Data.Migrations
 
                     b.HasIndex("ShiftId");
 
-                    b.ToTable("Employee");
+                    b.ToTable("Employees");
 
                     b.HasData(
                         new
@@ -183,12 +303,12 @@ namespace HRM.Data.Migrations
                             Id = 1,
                             Address = "123 Main St",
                             DepartmentId = 1,
-                            Email = "john.doe@example.com",
+                            Email = "john.smith@example.com",
                             FirstName = "John",
-                            FullName = "John A. Doe",
-                            HireDate = new DateTime(2024, 7, 21, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(5340),
-                            LastName = "Doe",
-                            MiddleName = "A.",
+                            FullName = "John A Smith",
+                            HireDate = new DateTime(2023, 9, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4124),
+                            LastName = "Smith",
+                            MiddleName = "A",
                             PositionId = 1,
                             ShiftId = 1
                         },
@@ -197,28 +317,126 @@ namespace HRM.Data.Migrations
                             Id = 2,
                             Address = "456 Elm St",
                             DepartmentId = 2,
-                            Email = "jane.smith@example.com",
+                            Email = "jane.doe@example.com",
                             FirstName = "Jane",
-                            FullName = "Jane B. Smith",
-                            HireDate = new DateTime(2024, 7, 21, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(5343),
-                            LastName = "Smith",
-                            MiddleName = "B.",
+                            FullName = "Jane B Doe",
+                            HireDate = new DateTime(2023, 10, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4127),
+                            LastName = "Doe",
+                            MiddleName = "B",
                             PositionId = 2,
                             ShiftId = 2
                         },
                         new
                         {
                             Id = 3,
-                            Address = "789 Oak St",
+                            Address = "789 Pine St",
                             DepartmentId = 3,
-                            Email = "bob.brown@example.com",
-                            FirstName = "Bob",
-                            FullName = "Bob C. Brown",
-                            HireDate = new DateTime(2024, 7, 21, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(5346),
-                            LastName = "Brown",
-                            MiddleName = "C.",
+                            Email = "alice.johnson@example.com",
+                            FirstName = "Alice",
+                            FullName = "Alice C Johnson",
+                            HireDate = new DateTime(2023, 11, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4130),
+                            LastName = "Johnson",
+                            MiddleName = "C",
                             PositionId = 3,
                             ShiftId = 3
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Address = "101 Oak St",
+                            DepartmentId = 4,
+                            Email = "bob.brown@example.com",
+                            FirstName = "Bob",
+                            FullName = "Bob D Brown",
+                            HireDate = new DateTime(2023, 12, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4132),
+                            LastName = "Brown",
+                            MiddleName = "D",
+                            PositionId = 4,
+                            ShiftId = 4
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Address = "202 Birch St",
+                            DepartmentId = 5,
+                            Email = "charlie.davis@example.com",
+                            FirstName = "Charlie",
+                            FullName = "Charlie E Davis",
+                            HireDate = new DateTime(2024, 1, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4134),
+                            LastName = "Davis",
+                            MiddleName = "E",
+                            PositionId = 5,
+                            ShiftId = 5
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Address = "303 Maple St",
+                            DepartmentId = 6,
+                            Email = "emily.clark@example.com",
+                            FirstName = "Emily",
+                            FullName = "Emily F Clark",
+                            HireDate = new DateTime(2024, 2, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4136),
+                            LastName = "Clark",
+                            MiddleName = "F",
+                            PositionId = 6,
+                            ShiftId = 6
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Address = "404 Cedar St",
+                            DepartmentId = 7,
+                            Email = "daniel.lee@example.com",
+                            FirstName = "Daniel",
+                            FullName = "Daniel G Lee",
+                            HireDate = new DateTime(2024, 3, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4143),
+                            LastName = "Lee",
+                            MiddleName = "G",
+                            PositionId = 7,
+                            ShiftId = 7
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Address = "505 Spruce St",
+                            DepartmentId = 8,
+                            Email = "sophia.martinez@example.com",
+                            FirstName = "Sophia",
+                            FullName = "Sophia H Martinez",
+                            HireDate = new DateTime(2024, 4, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4145),
+                            LastName = "Martinez",
+                            MiddleName = "H",
+                            PositionId = 8,
+                            ShiftId = 8
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Address = "606 Fir St",
+                            DepartmentId = 9,
+                            Email = "james.davis@example.com",
+                            FirstName = "James",
+                            FullName = "James I Davis",
+                            HireDate = new DateTime(2024, 5, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4147),
+                            LastName = "Davis",
+                            MiddleName = "I",
+                            PositionId = 9,
+                            ShiftId = 9
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Address = "707 Redwood St",
+                            DepartmentId = 10,
+                            Email = "ava.wilson@example.com",
+                            FirstName = "Ava",
+                            FullName = "Ava J Wilson",
+                            HireDate = new DateTime(2024, 6, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4149),
+                            LastName = "Wilson",
+                            MiddleName = "J",
+                            PositionId = 10,
+                            ShiftId = 10
                         });
                 });
 
@@ -257,15 +475,15 @@ namespace HRM.Data.Migrations
 
                     b.HasIndex("TraningId");
 
-                    b.ToTable("Performance");
+                    b.ToTable("Performances");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            Comment = "Good performance",
+                            Comment = "Great performance",
                             EmployeeId = 1,
-                            EvaluationDate = new DateTime(2024, 7, 21, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(5542),
+                            EvaluationDate = new DateTime(2024, 6, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4174),
                             SalaryId = 1,
                             Score = 85,
                             TraningId = 1
@@ -273,22 +491,92 @@ namespace HRM.Data.Migrations
                         new
                         {
                             Id = 2,
-                            Comment = "Excellent performance",
+                            Comment = "Excellent work",
                             EmployeeId = 2,
-                            EvaluationDate = new DateTime(2024, 7, 21, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(5544),
+                            EvaluationDate = new DateTime(2024, 5, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4177),
                             SalaryId = 2,
                             Score = 90,
-                            TraningId = 1
+                            TraningId = 2
                         },
                         new
                         {
                             Id = 3,
                             Comment = "Satisfactory performance",
                             EmployeeId = 3,
-                            EvaluationDate = new DateTime(2024, 7, 21, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(5546),
+                            EvaluationDate = new DateTime(2024, 4, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4179),
                             SalaryId = 3,
+                            Score = 78,
+                            TraningId = 3
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Comment = "Outstanding performance",
+                            EmployeeId = 4,
+                            EvaluationDate = new DateTime(2024, 3, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4180),
+                            SalaryId = 4,
+                            Score = 92,
+                            TraningId = 4
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Comment = "Very good performance",
+                            EmployeeId = 5,
+                            EvaluationDate = new DateTime(2024, 2, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4181),
+                            SalaryId = 5,
+                            Score = 88,
+                            TraningId = 5
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Comment = "Good work",
+                            EmployeeId = 6,
+                            EvaluationDate = new DateTime(2024, 1, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4183),
+                            SalaryId = 6,
                             Score = 80,
-                            TraningId = 2
+                            TraningId = 6
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Comment = "Needs improvement",
+                            EmployeeId = 7,
+                            EvaluationDate = new DateTime(2023, 12, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4184),
+                            SalaryId = 7,
+                            Score = 75,
+                            TraningId = 7
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Comment = "Great performance",
+                            EmployeeId = 8,
+                            EvaluationDate = new DateTime(2023, 11, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4185),
+                            SalaryId = 8,
+                            Score = 89,
+                            TraningId = 8
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Comment = "Satisfactory performance",
+                            EmployeeId = 9,
+                            EvaluationDate = new DateTime(2023, 10, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4187),
+                            SalaryId = 9,
+                            Score = 84,
+                            TraningId = 9
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Comment = "Outstanding performance",
+                            EmployeeId = 10,
+                            EvaluationDate = new DateTime(2023, 9, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4188),
+                            SalaryId = 10,
+                            Score = 91,
+                            TraningId = 10
                         });
                 });
 
@@ -300,9 +588,6 @@ namespace HRM.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("BenefitsId")
-                        .HasColumnType("int");
-
                     b.Property<string>("PositonDescription")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -313,31 +598,68 @@ namespace HRM.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BenefitsId");
-
-                    b.ToTable("Position");
+                    b.ToTable("Positions");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            BenefitsId = 1,
-                            PositonDescription = "Manages HR tasks",
-                            PositonName = "HR Manager"
+                            PositonDescription = "Develops software applications",
+                            PositonName = "Software Engineer"
                         },
                         new
                         {
                             Id = 2,
-                            BenefitsId = 2,
-                            PositonDescription = "Develops software",
-                            PositonName = "Developer"
+                            PositonDescription = "Manages HR department",
+                            PositonName = "HR Manager"
                         },
                         new
                         {
                             Id = 3,
-                            BenefitsId = 3,
-                            PositonDescription = "Handles sales and customer relations",
+                            PositonDescription = "Handles marketing tasks",
+                            PositonName = "Marketing Specialist"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            PositonDescription = "Handles sales tasks",
                             PositonName = "Sales Executive"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            PositonDescription = "Analyzes financial data",
+                            PositonName = "Finance Analyst"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            PositonDescription = "Handles customer queries",
+                            PositonName = "Customer Support Representative"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            PositonDescription = "Handles legal issues",
+                            PositonName = "Legal Advisor"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            PositonDescription = "Manages IT infrastructure",
+                            PositonName = "IT Specialist"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            PositonDescription = "Manages operations",
+                            PositonName = "Operations Manager"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            PositonDescription = "Conducts research and development",
+                            PositonName = "Research Scientist"
                         });
                 });
 
@@ -355,14 +677,14 @@ namespace HRM.Data.Migrations
                     b.Property<int>("DepartmentId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Position")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("PostingDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("RecruitmentDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RecruitmentPosition")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -378,28 +700,116 @@ namespace HRM.Data.Migrations
 
                     b.HasIndex("DepartmentId");
 
-                    b.ToTable("Recruitment");
+                    b.ToTable("Recruitments");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            Deadline = new DateTime(2024, 8, 20, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(5454),
-                            DepartmentId = 2,
-                            Position = "Developer",
-                            PostingDate = new DateTime(2024, 7, 21, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(5453),
-                            RecruitmentDescription = "Looking for a skilled developer",
+                            Deadline = new DateTime(2024, 4, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4247),
+                            DepartmentId = 1,
+                            PostingDate = new DateTime(2024, 1, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4246),
+                            RecruitmentDescription = "Looking for a Software Engineer",
+                            RecruitmentPosition = "Software Engineer",
                             Requestment = "[]",
                             Status = "Open"
                         },
                         new
                         {
                             Id = 2,
-                            Deadline = new DateTime(2024, 8, 20, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(5458),
+                            Deadline = new DateTime(2024, 5, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4249),
+                            DepartmentId = 2,
+                            PostingDate = new DateTime(2024, 2, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4249),
+                            RecruitmentDescription = "Looking for an HR Manager",
+                            RecruitmentPosition = "HR Manager",
+                            Requestment = "[]",
+                            Status = "Open"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Deadline = new DateTime(2024, 6, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4251),
                             DepartmentId = 3,
-                            Position = "Sales Executive",
-                            PostingDate = new DateTime(2024, 7, 21, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(5458),
-                            RecruitmentDescription = "Looking for a skilled sales executive",
+                            PostingDate = new DateTime(2024, 3, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4251),
+                            RecruitmentDescription = "Looking for a Marketing Specialist",
+                            RecruitmentPosition = "Marketing Specialist",
+                            Requestment = "[]",
+                            Status = "Closed"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Deadline = new DateTime(2024, 7, 7, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4253),
+                            DepartmentId = 4,
+                            PostingDate = new DateTime(2024, 4, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4253),
+                            RecruitmentDescription = "Looking for a Sales Executive",
+                            RecruitmentPosition = "Sales Executive",
+                            Requestment = "[]",
+                            Status = "Open"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Deadline = new DateTime(2024, 7, 12, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4259),
+                            DepartmentId = 5,
+                            PostingDate = new DateTime(2024, 5, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4258),
+                            RecruitmentDescription = "Looking for a Finance Analyst",
+                            RecruitmentPosition = "Finance Analyst",
+                            Requestment = "[]",
+                            Status = "Closed"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Deadline = new DateTime(2024, 7, 17, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4261),
+                            DepartmentId = 6,
+                            PostingDate = new DateTime(2024, 6, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4260),
+                            RecruitmentDescription = "Looking for a Customer Support Representative",
+                            RecruitmentPosition = "Customer Support Representative",
+                            Requestment = "[]",
+                            Status = "Open"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Deadline = new DateTime(2024, 7, 19, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4262),
+                            DepartmentId = 7,
+                            PostingDate = new DateTime(2024, 6, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4262),
+                            RecruitmentDescription = "Looking for a Legal Advisor",
+                            RecruitmentPosition = "Legal Advisor",
+                            Requestment = "[]",
+                            Status = "Closed"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Deadline = new DateTime(2024, 7, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4264),
+                            DepartmentId = 8,
+                            PostingDate = new DateTime(2024, 7, 2, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4264),
+                            RecruitmentDescription = "Looking for an IT Specialist",
+                            RecruitmentPosition = "IT Specialist",
+                            Requestment = "[]",
+                            Status = "Open"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Deadline = new DateTime(2024, 8, 1, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4266),
+                            DepartmentId = 9,
+                            PostingDate = new DateTime(2024, 7, 12, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4265),
+                            RecruitmentDescription = "Looking for an Operations Manager",
+                            RecruitmentPosition = "Operations Manager",
+                            Requestment = "[]",
+                            Status = "Open"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Deadline = new DateTime(2024, 8, 11, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4267),
+                            DepartmentId = 10,
+                            PostingDate = new DateTime(2024, 7, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4267),
+                            RecruitmentDescription = "Looking for a Research Scientist",
+                            RecruitmentPosition = "Research Scientist",
                             Requestment = "[]",
                             Status = "Open"
                         });
@@ -430,35 +840,98 @@ namespace HRM.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Salary");
+                    b.ToTable("Salarys");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            BasicSalary = 60000f,
+                            BasicSalary = 50000f,
                             Bonus = 5000f,
                             Deductions = 2000f,
-                            NetSalary = 63000f,
-                            PaymentDate = new DateTime(2024, 7, 21, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(5480)
+                            NetSalary = 53000f,
+                            PaymentDate = new DateTime(2024, 6, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4291)
                         },
                         new
                         {
                             Id = 2,
-                            BasicSalary = 80000f,
-                            Bonus = 10000f,
-                            Deductions = 3000f,
-                            NetSalary = 87000f,
-                            PaymentDate = new DateTime(2024, 7, 21, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(5482)
+                            BasicSalary = 55000f,
+                            Bonus = 5500f,
+                            Deductions = 2500f,
+                            NetSalary = 58000f,
+                            PaymentDate = new DateTime(2024, 5, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4293)
                         },
                         new
                         {
                             Id = 3,
+                            BasicSalary = 60000f,
+                            Bonus = 6000f,
+                            Deductions = 3000f,
+                            NetSalary = 63000f,
+                            PaymentDate = new DateTime(2024, 4, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4295)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            BasicSalary = 65000f,
+                            Bonus = 6500f,
+                            Deductions = 3500f,
+                            NetSalary = 68000f,
+                            PaymentDate = new DateTime(2024, 3, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4296)
+                        },
+                        new
+                        {
+                            Id = 5,
                             BasicSalary = 70000f,
                             Bonus = 7000f,
-                            Deductions = 2500f,
-                            NetSalary = 74500f,
-                            PaymentDate = new DateTime(2024, 7, 21, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(5483)
+                            Deductions = 4000f,
+                            NetSalary = 73000f,
+                            PaymentDate = new DateTime(2024, 2, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4297)
+                        },
+                        new
+                        {
+                            Id = 6,
+                            BasicSalary = 75000f,
+                            Bonus = 7500f,
+                            Deductions = 4500f,
+                            NetSalary = 78000f,
+                            PaymentDate = new DateTime(2024, 1, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4299)
+                        },
+                        new
+                        {
+                            Id = 7,
+                            BasicSalary = 80000f,
+                            Bonus = 8000f,
+                            Deductions = 5000f,
+                            NetSalary = 83000f,
+                            PaymentDate = new DateTime(2023, 12, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4300)
+                        },
+                        new
+                        {
+                            Id = 8,
+                            BasicSalary = 85000f,
+                            Bonus = 8500f,
+                            Deductions = 5500f,
+                            NetSalary = 88000f,
+                            PaymentDate = new DateTime(2023, 11, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4301)
+                        },
+                        new
+                        {
+                            Id = 9,
+                            BasicSalary = 90000f,
+                            Bonus = 9000f,
+                            Deductions = 6000f,
+                            NetSalary = 93000f,
+                            PaymentDate = new DateTime(2023, 10, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4303)
+                        },
+                        new
+                        {
+                            Id = 10,
+                            BasicSalary = 95000f,
+                            Bonus = 9500f,
+                            Deductions = 6500f,
+                            NetSalary = 98000f,
+                            PaymentDate = new DateTime(2023, 9, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4304)
                         });
                 });
 
@@ -485,36 +958,92 @@ namespace HRM.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Shift");
+                    b.ToTable("Shifts");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            DayOfApplication = "[]",
-                            EndAt = new DateTime(2024, 7, 22, 2, 32, 9, 295, DateTimeKind.Local).AddTicks(5416),
-                            StartAt = new DateTime(2024, 7, 21, 18, 32, 9, 295, DateTimeKind.Local).AddTicks(5398),
+                            DayOfApplication = "[\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\"]",
+                            EndAt = new DateTime(2024, 7, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4328),
+                            StartAt = new DateTime(2024, 7, 22, 12, 50, 45, 572, DateTimeKind.Local).AddTicks(4328),
                             TotalHouse = new TimeOnly(8, 0, 0)
                         },
                         new
                         {
                             Id = 2,
-                            DayOfApplication = "[]",
-                            EndAt = new DateTime(2024, 7, 22, 1, 32, 9, 295, DateTimeKind.Local).AddTicks(5432),
-                            StartAt = new DateTime(2024, 7, 21, 17, 32, 9, 295, DateTimeKind.Local).AddTicks(5431),
-                            TotalHouse = new TimeOnly(8, 0, 0)
+                            DayOfApplication = "[\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\"]",
+                            EndAt = new DateTime(2024, 7, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4424),
+                            StartAt = new DateTime(2024, 7, 22, 11, 50, 45, 572, DateTimeKind.Local).AddTicks(4424),
+                            TotalHouse = new TimeOnly(9, 0, 0)
                         },
                         new
                         {
                             Id = 3,
-                            DayOfApplication = "[]",
-                            EndAt = new DateTime(2024, 7, 22, 0, 32, 9, 295, DateTimeKind.Local).AddTicks(5434),
-                            StartAt = new DateTime(2024, 7, 21, 16, 32, 9, 295, DateTimeKind.Local).AddTicks(5433),
+                            DayOfApplication = "[\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\"]",
+                            EndAt = new DateTime(2024, 7, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4431),
+                            StartAt = new DateTime(2024, 7, 22, 13, 50, 45, 572, DateTimeKind.Local).AddTicks(4431),
+                            TotalHouse = new TimeOnly(7, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DayOfApplication = "[\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\"]",
+                            EndAt = new DateTime(2024, 7, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4437),
+                            StartAt = new DateTime(2024, 7, 22, 12, 50, 45, 572, DateTimeKind.Local).AddTicks(4436),
                             TotalHouse = new TimeOnly(8, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 5,
+                            DayOfApplication = "[\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\"]",
+                            EndAt = new DateTime(2024, 7, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4443),
+                            StartAt = new DateTime(2024, 7, 22, 14, 50, 45, 572, DateTimeKind.Local).AddTicks(4442),
+                            TotalHouse = new TimeOnly(6, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 6,
+                            DayOfApplication = "[\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\"]",
+                            EndAt = new DateTime(2024, 7, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4448),
+                            StartAt = new DateTime(2024, 7, 22, 12, 50, 45, 572, DateTimeKind.Local).AddTicks(4448),
+                            TotalHouse = new TimeOnly(8, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 7,
+                            DayOfApplication = "[\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\"]",
+                            EndAt = new DateTime(2024, 7, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4454),
+                            StartAt = new DateTime(2024, 7, 22, 10, 50, 45, 572, DateTimeKind.Local).AddTicks(4453),
+                            TotalHouse = new TimeOnly(10, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 8,
+                            DayOfApplication = "[\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\"]",
+                            EndAt = new DateTime(2024, 7, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4465),
+                            StartAt = new DateTime(2024, 7, 22, 12, 50, 45, 572, DateTimeKind.Local).AddTicks(4464),
+                            TotalHouse = new TimeOnly(8, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 9,
+                            DayOfApplication = "[\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\"]",
+                            EndAt = new DateTime(2024, 7, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4470),
+                            StartAt = new DateTime(2024, 7, 22, 11, 50, 45, 572, DateTimeKind.Local).AddTicks(4470),
+                            TotalHouse = new TimeOnly(9, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 10,
+                            DayOfApplication = "[\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\"]",
+                            EndAt = new DateTime(2024, 7, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4475),
+                            StartAt = new DateTime(2024, 7, 22, 13, 50, 45, 572, DateTimeKind.Local).AddTicks(4475),
+                            TotalHouse = new TimeOnly(7, 0, 0)
                         });
                 });
 
-            modelBuilder.Entity("HRM.Models.Traning", b =>
+            modelBuilder.Entity("HRM.Models.Training", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -546,28 +1075,108 @@ namespace HRM.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Traning");
+                    b.ToTable("Tranings");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            EndAt = new DateTime(2024, 8, 21, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(5515),
-                            StartAt = new DateTime(2024, 7, 21, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(5514),
-                            Status = "Ongoing",
-                            TrainDescription = "Training for software development",
-                            TrainName = "Software Development",
-                            TypeTrain = "[]"
+                            EndAt = new DateTime(2024, 6, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4506),
+                            StartAt = new DateTime(2024, 5, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4505),
+                            Status = "Completed",
+                            TrainDescription = "Training for leadership skills",
+                            TrainName = "Leadership Training",
+                            TypeTrain = "[\"Online\",\"In-person\"]"
                         },
                         new
                         {
                             Id = 2,
-                            EndAt = new DateTime(2024, 8, 21, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(5517),
-                            StartAt = new DateTime(2024, 7, 21, 22, 32, 9, 295, DateTimeKind.Local).AddTicks(5517),
-                            Status = "Ongoing",
+                            EndAt = new DateTime(2024, 5, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4509),
+                            StartAt = new DateTime(2024, 4, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4509),
+                            Status = "Completed",
+                            TrainDescription = "Training for technical skills",
+                            TrainName = "Technical Training",
+                            TypeTrain = "[\"Online\",\"In-person\"]"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            EndAt = new DateTime(2024, 4, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4513),
+                            StartAt = new DateTime(2024, 3, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4512),
+                            Status = "Completed",
                             TrainDescription = "Training for sales skills",
-                            TrainName = "Sales Skills",
-                            TypeTrain = "[]"
+                            TrainName = "Sales Training",
+                            TypeTrain = "[\"Online\",\"In-person\"]"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            EndAt = new DateTime(2024, 3, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4516),
+                            StartAt = new DateTime(2024, 2, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4515),
+                            Status = "Completed",
+                            TrainDescription = "Training for marketing skills",
+                            TrainName = "Marketing Training",
+                            TypeTrain = "[\"Online\",\"In-person\"]"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            EndAt = new DateTime(2024, 2, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4519),
+                            StartAt = new DateTime(2024, 1, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4518),
+                            Status = "Completed",
+                            TrainDescription = "Training for HR skills",
+                            TrainName = "HR Training",
+                            TypeTrain = "[\"Online\",\"In-person\"]"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            EndAt = new DateTime(2024, 1, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4521),
+                            StartAt = new DateTime(2023, 12, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4521),
+                            Status = "Completed",
+                            TrainDescription = "Training for finance skills",
+                            TrainName = "Finance Training",
+                            TypeTrain = "[\"Online\",\"In-person\"]"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            EndAt = new DateTime(2023, 12, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4524),
+                            StartAt = new DateTime(2023, 11, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4524),
+                            Status = "Completed",
+                            TrainDescription = "Training for customer service skills",
+                            TrainName = "Customer Service Training",
+                            TypeTrain = "[\"Online\",\"In-person\"]"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            EndAt = new DateTime(2023, 11, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4527),
+                            StartAt = new DateTime(2023, 10, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4526),
+                            Status = "Completed",
+                            TrainDescription = "Training for legal skills",
+                            TrainName = "Legal Training",
+                            TypeTrain = "[\"Online\",\"In-person\"]"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            EndAt = new DateTime(2023, 10, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4530),
+                            StartAt = new DateTime(2023, 9, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4529),
+                            Status = "Completed",
+                            TrainDescription = "Training for IT skills",
+                            TrainName = "IT Training",
+                            TypeTrain = "[\"Online\",\"In-person\"]"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            EndAt = new DateTime(2023, 9, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4532),
+                            StartAt = new DateTime(2023, 8, 22, 20, 50, 45, 572, DateTimeKind.Local).AddTicks(4532),
+                            Status = "Completed",
+                            TrainDescription = "Training for research skills",
+                            TrainName = "Research Training",
+                            TypeTrain = "[\"Online\",\"In-person\"]"
                         });
                 });
 
@@ -769,6 +1378,17 @@ namespace HRM.Data.Migrations
                     b.ToTable("UserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("HRM.Models.Benefits", b =>
+                {
+                    b.HasOne("HRM.Models.Position", "Position")
+                        .WithMany()
+                        .HasForeignKey("PositionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Position");
+                });
+
             modelBuilder.Entity("HRM.Models.Employee", b =>
                 {
                     b.HasOne("HRM.Models.Department", "Department")
@@ -810,7 +1430,7 @@ namespace HRM.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("HRM.Models.Traning", "Traning")
+                    b.HasOne("HRM.Models.Training", "Training")
                         .WithMany()
                         .HasForeignKey("TraningId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -820,18 +1440,7 @@ namespace HRM.Data.Migrations
 
                     b.Navigation("Salary");
 
-                    b.Navigation("Traning");
-                });
-
-            modelBuilder.Entity("HRM.Models.Position", b =>
-                {
-                    b.HasOne("HRM.Models.Benefits", "Benefits")
-                        .WithMany()
-                        .HasForeignKey("BenefitsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Benefits");
+                    b.Navigation("Training");
                 });
 
             modelBuilder.Entity("HRM.Models.Recruitment", b =>
