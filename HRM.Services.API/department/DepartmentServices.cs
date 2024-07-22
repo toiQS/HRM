@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HRM.Services.API.department
 {
-    public class DepartmentServices
+    public class DepartmentServices : IDepartmentServices
     {
         private readonly ApplicationDbContext _context;
         private readonly ILogger<DepartmentServices> _logger;
