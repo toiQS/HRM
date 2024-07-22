@@ -8,13 +8,13 @@ namespace HRM.Data
     public class ApplicationDbContext : IdentityDbContext
     {
         public DbSet<Benefits> Benefits { get; set; }
-        public DbSet<Department> Department { get; set; }
-        public DbSet<Employee> Employee { get; set; }
-        public DbSet<Position> Position { get; set; }
-        public DbSet<Recruitment> Recruitment { get; set; }
-        public DbSet<Salary> Salary { get; set; }
-        public DbSet<Shift> Shift { get; set; }
-        public DbSet<Traning> Traning { get; set; }
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Position> Positions { get; set; }
+        public DbSet<Recruitment> Recruitments { get; set; }
+        public DbSet<Salary> Salarys { get; set; }
+        public DbSet<Shift> Shifts { get; set; }
+        public DbSet<Traning> Tranings { get; set; }
 
         protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
         {
