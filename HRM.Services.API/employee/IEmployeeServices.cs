@@ -9,8 +9,8 @@ namespace HRM.Services.API.employee
 {
     public interface IEmployeeServices
     {
-        public Task<ServiceResult<IEnumerable<Employee>>> GetEmployee();
-        public Task<ServiceResult<IEnumerable<Employee>>> GetEmployeeByText(string text);
+        public Task<ServiceResult<IEnumerable<Employee>>> GetEmployees();
+        public Task<ServiceResult<IEnumerable<Employee>>> GetEmployeesByText(string text);
         public Task<ServiceResult<Employee>> GetById(int id);
         public Task<ServiceResult<Employee>> GetByText(string text);
         public Task<ServiceResult<bool>> Add(Employee Employee);
