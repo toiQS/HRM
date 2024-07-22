@@ -87,16 +87,16 @@ namespace HRM.Data
 
             // Seeding Performance
             modelBuilder.Entity<Performance>().HasData(
-                new Performance { Id = 1, EvaluationDate = DateTime.Now.AddMonths(-1), Score = 85, Comment = "Great performance", EmployeeId = 1, TraningId = 1, SalaryId = 1 },
-                new Performance { Id = 2, EvaluationDate = DateTime.Now.AddMonths(-2), Score = 90, Comment = "Excellent work", EmployeeId = 2, TraningId = 2, SalaryId = 2 },
-                new Performance { Id = 3, EvaluationDate = DateTime.Now.AddMonths(-3), Score = 78, Comment = "Satisfactory performance", EmployeeId = 3, TraningId = 3, SalaryId = 3 },
-                new Performance { Id = 4, EvaluationDate = DateTime.Now.AddMonths(-4), Score = 92, Comment = "Outstanding performance", EmployeeId = 4, TraningId = 4, SalaryId = 4 },
-                new Performance { Id = 5, EvaluationDate = DateTime.Now.AddMonths(-5), Score = 88, Comment = "Very good performance", EmployeeId = 5, TraningId = 5, SalaryId = 5 },
-                new Performance { Id = 6, EvaluationDate = DateTime.Now.AddMonths(-6), Score = 80, Comment = "Good work", EmployeeId = 6, TraningId = 6, SalaryId = 6 },
-                new Performance { Id = 7, EvaluationDate = DateTime.Now.AddMonths(-7), Score = 75, Comment = "Needs improvement", EmployeeId = 7, TraningId = 7, SalaryId = 7 },
-                new Performance { Id = 8, EvaluationDate = DateTime.Now.AddMonths(-8), Score = 89, Comment = "Great performance", EmployeeId = 8, TraningId = 8, SalaryId = 8 },
-                new Performance { Id = 9, EvaluationDate = DateTime.Now.AddMonths(-9), Score = 84, Comment = "Satisfactory performance", EmployeeId = 9, TraningId = 9, SalaryId = 9 },
-                new Performance { Id = 10, EvaluationDate = DateTime.Now.AddMonths(-10), Score = 91, Comment = "Outstanding performance", EmployeeId = 10, TraningId = 10, SalaryId = 10 }
+                new Performance { Id = 1, EvaluationDate = DateTime.Now.AddMonths(-1), Score = 85, Comment = "Great performance", EmployeeId = 1, TrainingId = 1, SalaryId = 1 },
+                new Performance { Id = 2, EvaluationDate = DateTime.Now.AddMonths(-2), Score = 90, Comment = "Excellent work", EmployeeId = 2, TrainingId = 2, SalaryId = 2 },
+                new Performance { Id = 3, EvaluationDate = DateTime.Now.AddMonths(-3), Score = 78, Comment = "Satisfactory performance", EmployeeId = 3, TrainingId = 3, SalaryId = 3 },
+                new Performance { Id = 4, EvaluationDate = DateTime.Now.AddMonths(-4), Score = 92, Comment = "Outstanding performance", EmployeeId = 4, TrainingId = 4, SalaryId = 4 },
+                new Performance { Id = 5, EvaluationDate = DateTime.Now.AddMonths(-5), Score = 88, Comment = "Very good performance", EmployeeId = 5, TrainingId = 5, SalaryId = 5 },
+                new Performance { Id = 6, EvaluationDate = DateTime.Now.AddMonths(-6), Score = 80, Comment = "Good work", EmployeeId = 6, TrainingId = 6, SalaryId = 6 },
+                new Performance { Id = 7, EvaluationDate = DateTime.Now.AddMonths(-7), Score = 75, Comment = "Needs improvement", EmployeeId = 7, TrainingId = 7, SalaryId = 7 },
+                new Performance { Id = 8, EvaluationDate = DateTime.Now.AddMonths(-8), Score = 89, Comment = "Great performance", EmployeeId = 8, TrainingId = 8, SalaryId = 8 },
+                new Performance { Id = 9, EvaluationDate = DateTime.Now.AddMonths(-9), Score = 84, Comment = "Satisfactory performance", EmployeeId = 9, TrainingId = 9, SalaryId = 9 },
+                new Performance { Id = 10, EvaluationDate = DateTime.Now.AddMonths(-10), Score = 91, Comment = "Outstanding performance", EmployeeId = 10, TrainingId = 10, SalaryId = 10 }
             );
 
             // Seeding Position
