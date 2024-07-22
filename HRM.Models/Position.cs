@@ -15,9 +15,5 @@ namespace HRM.Models
         public string PositonName { get; set; } = string.Empty;
         public string PositonDescription { get; set; } = string.Empty;
 
-        [ForeignKey(nameof(Benefits))]        
-        
-        public int BenefitsId { get; set; }
-        public virtual Benefits Benefits { get; set; }
     }
 }
