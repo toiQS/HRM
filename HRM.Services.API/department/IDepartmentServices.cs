@@ -9,8 +9,8 @@ namespace HRM.Services.API.department
 {
     public interface IDepartmentServices
     {
-        public Task<ServiceResult<IEnumerable<Department>>> GetDepartment();
-        public Task<ServiceResult<IEnumerable<Department>>> GetDepartmentByText(string text);
+        public Task<ServiceResult<IEnumerable<Department>>> GetDepartments();
+        public Task<ServiceResult<IEnumerable<Department>>> GetDepartmentsByText(string text);
         public Task<ServiceResult<Department>> GetById(int id);
         public Task<ServiceResult<Department>> GetByText(string text);
         public Task<ServiceResult<bool>> Add(Department Department);
