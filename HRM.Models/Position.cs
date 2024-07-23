@@ -12,8 +12,8 @@ namespace HRM.Models
     {
         [Key]
         public int Id { get; set; }
-        public string PositonName { get; set; } = string.Empty;
-        public string PositonDescription { get; set; } = string.Empty;
+        public string PositionName { get; set; } = string.Empty;
+        public string PositionDescription { get; set; } = string.Empty;
 
     }
 }
