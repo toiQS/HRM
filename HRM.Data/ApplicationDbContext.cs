@@ -7,6 +7,7 @@ namespace HRM.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
         public DbSet<Benefits> Benefits { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Employee> Employees { get; set; }
