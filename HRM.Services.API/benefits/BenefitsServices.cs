@@ -12,7 +12,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace HRM.Services.API.benefits
 {
-    public class BenefitsServices
+    public class BenefitsServices : IBenefitsServices
     {
         private readonly ApplicationDbContext _context;
         private readonly ILogger<BenefitsServices> _logger;
