@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HRM.Services.API.training
 {
-    internal interface ITrainingServices
+    public interface ITrainingServices
     {
         Task<ServiceResult<IEnumerable<Training>>> GetTrainings();
         Task<ServiceResult<IEnumerable<Training>>> GetTrainingsByDateRange(DateTime startDate, DateTime endDate);
