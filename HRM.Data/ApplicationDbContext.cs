@@ -13,9 +13,9 @@ namespace HRM.Data
         public DbSet<Performance> Performances { get; set; }
         public DbSet<Position> Positions { get; set; }
         public DbSet<Recruitment> Recruitments { get; set; }
-        public DbSet<Salary> Salarys { get; set; }
+        public DbSet<Salary> Salaries { get; set; }
         public DbSet<Shift> Shifts { get; set; }
-        public DbSet<Training> Tranings { get; set; }
+        public DbSet<Training> Trainings { get; set; }
 
         protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
         {
@@ -143,16 +143,16 @@ namespace HRM.Data
 
             // Seeding Shift
             modelBuilder.Entity<Shift>().HasData(
-                new Shift { Id = 1, StartAt = DateTime.Now.AddHours(-8), EndAt = DateTime.Now, DayOfApplication = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" }, TotalHouse = TimeOnly.Parse("08:00") },
-                new Shift { Id = 2, StartAt = DateTime.Now.AddHours(-9), EndAt = DateTime.Now, DayOfApplication = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" }, TotalHouse = TimeOnly.Parse("09:00") },
-                new Shift { Id = 3, StartAt = DateTime.Now.AddHours(-7), EndAt = DateTime.Now, DayOfApplication = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" }, TotalHouse = TimeOnly.Parse("07:00") },
-                new Shift { Id = 4, StartAt = DateTime.Now.AddHours(-8), EndAt = DateTime.Now, DayOfApplication = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" }, TotalHouse = TimeOnly.Parse("08:00") },
-                new Shift { Id = 5, StartAt = DateTime.Now.AddHours(-6), EndAt = DateTime.Now, DayOfApplication = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" }, TotalHouse = TimeOnly.Parse("06:00") },
-                new Shift { Id = 6, StartAt = DateTime.Now.AddHours(-8), EndAt = DateTime.Now, DayOfApplication = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" }, TotalHouse = TimeOnly.Parse("08:00") },
-                new Shift { Id = 7, StartAt = DateTime.Now.AddHours(-10), EndAt = DateTime.Now, DayOfApplication = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" }, TotalHouse = TimeOnly.Parse("10:00") },
-                new Shift { Id = 8, StartAt = DateTime.Now.AddHours(-8), EndAt = DateTime.Now, DayOfApplication = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" }, TotalHouse = TimeOnly.Parse("08:00") },
-                new Shift { Id = 9, StartAt = DateTime.Now.AddHours(-9), EndAt = DateTime.Now, DayOfApplication = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" }, TotalHouse = TimeOnly.Parse("09:00") },
-                new Shift { Id = 10, StartAt = DateTime.Now.AddHours(-7), EndAt = DateTime.Now, DayOfApplication = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" }, TotalHouse = TimeOnly.Parse("07:00") }
+                new Shift { Id = 1, StartAt = DateTime.Now.AddHours(-8), EndAt = DateTime.Now, DayOfApplication = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" }, TotalHours = TimeOnly.Parse("08:00") },
+                new Shift { Id = 2, StartAt = DateTime.Now.AddHours(-9), EndAt = DateTime.Now, DayOfApplication = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" }, TotalHours = TimeOnly.Parse("09:00") },
+                new Shift { Id = 3, StartAt = DateTime.Now.AddHours(-7), EndAt = DateTime.Now, DayOfApplication = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" }, TotalHours = TimeOnly.Parse("07:00") },
+                new Shift { Id = 4, StartAt = DateTime.Now.AddHours(-8), EndAt = DateTime.Now, DayOfApplication = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" }, TotalHours = TimeOnly.Parse("08:00") },
+                new Shift { Id = 5, StartAt = DateTime.Now.AddHours(-6), EndAt = DateTime.Now, DayOfApplication = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" }, TotalHours = TimeOnly.Parse("06:00") },
+                new Shift { Id = 6, StartAt = DateTime.Now.AddHours(-8), EndAt = DateTime.Now, DayOfApplication = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" }, TotalHours = TimeOnly.Parse("08:00") },
+                new Shift { Id = 7, StartAt = DateTime.Now.AddHours(-10), EndAt = DateTime.Now, DayOfApplication = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" }, TotalHours = TimeOnly.Parse("10:00") },
+                new Shift { Id = 8, StartAt = DateTime.Now.AddHours(-8), EndAt = DateTime.Now, DayOfApplication = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" }, TotalHours = TimeOnly.Parse("08:00") },
+                new Shift { Id = 9, StartAt = DateTime.Now.AddHours(-9), EndAt = DateTime.Now, DayOfApplication = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" }, TotalHours = TimeOnly.Parse("09:00") },
+                new Shift { Id = 10, StartAt = DateTime.Now.AddHours(-7), EndAt = DateTime.Now, DayOfApplication = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" }, TotalHours = TimeOnly.Parse("07:00") }
             );
 
             // Seeding Training
