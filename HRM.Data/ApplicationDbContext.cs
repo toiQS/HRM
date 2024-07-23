@@ -101,16 +101,16 @@ namespace HRM.Data
 
             // Seeding Position
             modelBuilder.Entity<Position>().HasData(
-                new Position { Id = 1, PositonName = "Software Engineer", PositonDescription = "Develops software applications" },
-                new Position { Id = 2, PositonName = "HR Manager", PositonDescription = "Manages HR department" },
-                new Position { Id = 3, PositonName = "Marketing Specialist", PositonDescription = "Handles marketing tasks" },
-                new Position { Id = 4, PositonName = "Sales Executive", PositonDescription = "Handles sales tasks" },
-                new Position { Id = 5, PositonName = "Finance Analyst", PositonDescription = "Analyzes financial data" },
-                new Position { Id = 6, PositonName = "Customer Support Representative", PositonDescription = "Handles customer queries" },
-                new Position { Id = 7, PositonName = "Legal Advisor", PositonDescription = "Handles legal issues" },
-                new Position { Id = 8, PositonName = "IT Specialist", PositonDescription = "Manages IT infrastructure" },
-                new Position { Id = 9, PositonName = "Operations Manager", PositonDescription = "Manages operations" },
-                new Position { Id = 10, PositonName = "Research Scientist", PositonDescription = "Conducts research and development" }
+                new Position { Id = 1, PositionName = "Software Engineer", PositionDescription = "Develops software applications" },
+                new Position { Id = 2, PositionName = "HR Manager", PositionDescription = "Manages HR department" },
+                new Position { Id = 3, PositionName = "Marketing Specialist", PositionDescription = "Handles marketing tasks" },
+                new Position { Id = 4, PositionName = "Sales Executive", PositionDescription = "Handles sales tasks" },
+                new Position { Id = 5, PositionName = "Finance Analyst", PositionDescription = "Analyzes financial data" },
+                new Position { Id = 6, PositionName = "Customer Support Representative", PositionDescription = "Handles customer queries" },
+                new Position { Id = 7, PositionName = "Legal Advisor", PositionDescription = "Handles legal issues" },
+                new Position { Id = 8, PositionName = "IT Specialist", PositionDescription = "Manages IT infrastructure" },
+                new Position { Id = 9, PositionName = "Operations Manager", PositionDescription = "Manages operations" },
+                new Position { Id = 10, PositionName = "Research Scientist", PositionDescription = "Conducts research and development" }
             );
 
             // Seeding Recruitment
