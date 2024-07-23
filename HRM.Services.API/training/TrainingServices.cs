@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HRM.Services.API.training
 {
-    public class TrainingServices
+    public class TrainingServices : ITrainingServices
     {
         private readonly ApplicationDbContext _context;
         private readonly ILogger<TrainingServices> _logger;
