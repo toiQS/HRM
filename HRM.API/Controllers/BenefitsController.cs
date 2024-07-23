@@ -25,7 +25,7 @@ namespace HRM.API.Controllers
         }
 
         [HttpGet]
-        [Route("{text}")]
+        [Route("{text}:string")]
         public async Task<IActionResult> GetBenefitsByText(string text)
         {
             var result = await _benefits.GetBenefitsByText(text);
@@ -65,6 +65,35 @@ namespace HRM.API.Controllers
                 return Ok(result);
             }
             return BadRequest();    
+        }
+        [HttpPut]
+        public async Task<IActionResult> UpdateBenefits(int id,BenefitsRequest benefits)
+        {
+            if (ModelState.IsValid && id > 0)
+            {
+                var data = new Benefits()
+                {
+                    BenefitsName = benefits.BenefitsName,
+                    BenefitsDescription = benefits.BenefitsDescription,
+                    EndAt = benefits.EndAt,
+                    PositionId = benefits.PositionId,
+                    StartAt = benefits.StartAt,
+                    TypeBenefits = benefits.TypeBenefits,
+                };
+                var result = await _benefits.Update(id,data);
+                return Ok(result);
+            }
+            return BadRequest();
+        }
+        [HttpDelete]
+        public async Task<IActionResult> RemoveBenefits(int id)
+        {
+            if (id > 0)
+            {
+                var result = await _benefits.Delete(id);
+                return Ok(result);
+            }
+            return BadRequest();
         }
     }
 }
