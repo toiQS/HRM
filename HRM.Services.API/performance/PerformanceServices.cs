@@ -7,9 +7,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HRM.Services.API.Performances
+namespace HRM.Services.API.performance
 {
-    public class PerformanceServices
+    public class PerformanceServices : IPerformanceServices
     {
         private readonly ApplicationDbContext _context;
         private readonly ILogger<PerformanceServices> _logger;
