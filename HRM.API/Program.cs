@@ -1,4 +1,5 @@
 using HRM.Data;
+using HRM.Services.API.auth;
 using HRM.Services.API.benefits;
 using HRM.Services.API.department;
 using HRM.Services.API.employee;
@@ -8,6 +9,7 @@ using HRM.Services.API.recruitment;
 using HRM.Services.API.salary;
 using HRM.Services.API.shift;
 using HRM.Services.API.training;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -33,6 +35,7 @@ builder.Services.AddScoped<IRecruitmentServices, RecruitmentServices>();
 builder.Services.AddScoped<ISalaryServices, SalaryServices>();
 builder.Services.AddScoped<IShiftServices, ShiftServices>();
 builder.Services.AddScoped<ITrainingServices, TrainingServices>();
+builder.Services.AddScoped<IAuthServices, AuthServices>();
 
 var app = builder.Build();
 
@@ -48,5 +51,45 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+using (var scope = app.Services.CreateScope())
+{
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    var roles = new[] { "Admin", "User" };
+    foreach (var role in roles)
+    {
+        if (!await roleManager.RoleExistsAsync(role))
+        {
+            await roleManager.CreateAsync(new IdentityRole(role));
+        }
+
+    }
+
+}
+
+using (var scope = app.Services.CreateScope())
+{
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+    var email = "admin@admin.com";
+    var name = "Admin";
+    var password = "Admin@1234";
+    try
+    {
+        var identityUser = new IdentityUser
+        {
+            Id = "user-default",
+            UserName = name,
+            Email = email,
+            EmailConfirmed = false,
+        };
+        await userManager.CreateAsync(identityUser, password);
+        await userManager.AddToRoleAsync(identityUser, "Admin");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine(ex.ToString());
+        Console.WriteLine(ex.StackTrace.ReplaceLineEndings());
+    }
+}
 
 app.Run();
