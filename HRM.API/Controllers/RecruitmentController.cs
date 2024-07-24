@@ -24,7 +24,7 @@ namespace HRM.API.Controllers
         }
 
         [HttpGet]
-        [Route("{text}:string")]
+        [Route("{text}")]
         public async Task<IActionResult> GetRecruitmentsByText(string text)
         {
             var result = await _recruitmentServices.GetRecruitmentsByText(text);
