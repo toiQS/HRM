@@ -24,7 +24,7 @@ namespace HRM.API.Controllers
         }
 
         [HttpGet]
-        [Route("{text}:string")]
+        [Route("{text}")]
         public async Task<IActionResult> GetPositionsByText(string text)
         {
             var result = await _positionServices.GetPositionsByText(text);
