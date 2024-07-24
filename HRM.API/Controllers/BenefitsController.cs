@@ -25,7 +25,7 @@ namespace HRM.API.Controllers
         }
 
         [HttpGet]
-        [Route("{text}:string")]
+        [Route("{text}")]
         public async Task<IActionResult> GetBenefitsByText(string text)
         {
             var result = await _benefits.GetBenefitsByText(text);
