@@ -23,7 +23,7 @@ namespace HRM.API.Controllers
             return Ok(data);
         }
         [HttpGet]
-        [Route("{text}:string")]
+        [Route("{text}")]
         public async Task<IActionResult> GetEmployeesByText(string text)
         {
             if (string.IsNullOrEmpty(text)) return BadRequest();
