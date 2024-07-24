@@ -26,7 +26,7 @@ namespace HRM.API.Controllers
         }
 
         [HttpGet]
-        [Route("{text}:string")]
+        [Route("{text}")]
         public async Task<IActionResult> GetDepartmentsByText(string text)
         {
             var result = await _departmentServices.GetDepartmentsByText(text);
