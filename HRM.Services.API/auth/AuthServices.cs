@@ -87,10 +87,14 @@ namespace HRM.Services.API.auth
                 var identityUser = await _userManager.FindByEmailAsync(loginModel.Email);
                 if (identityUser == null)
                 {
-                    ServiceResult<bool>.FailedResult("Not Found");
+                    return ServiceResult<bool>.FailedResult("Not Found");
                 }
                 var result = await _signInManager.CheckPasswordSignInAsync(identityUser, loginModel.Password, false);
-                return ServiceResult<bool>.SuccessResult(true);
+                if (result.Succeeded)
+                {
+                    return ServiceResult<bool>.SuccessResult(true);
+                }
+                return ServiceResult<bool>.FailedResult("Incorrect Password");
             }
             catch (Exception ex)
             {
