@@ -26,6 +26,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+{
+    options.Password.RequiredUniqueChars = 6;
+})
+    .AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
+
 builder.Services.AddScoped<IBenefitsServices,BenefitsServices>();
 builder.Services.AddScoped<IDepartmentServices,DepartmentServices>();
 builder.Services.AddScoped<IEmployeeServices,EmployeeServices>();
@@ -36,6 +44,8 @@ builder.Services.AddScoped<ISalaryServices, SalaryServices>();
 builder.Services.AddScoped<IShiftServices, ShiftServices>();
 builder.Services.AddScoped<ITrainingServices, TrainingServices>();
 builder.Services.AddScoped<IAuthServices, AuthServices>();
+
+
 
 var app = builder.Build();
 
